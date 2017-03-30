@@ -5,11 +5,21 @@ import time
 import random
 
 #用户账号列表，用“|”分隔用户名和密码
+#userlist = [
+#    "liudiwei18@sina.com|********",
+#    "17185800144|********",
+#    "17185800034|********",
+#    "17190714681|********"
+#]
+
+#userlist = [
+#    "17051056242|870921"
+#]
+
 userlist = [
-    "liudiwei18@sina.com|********",
-    "17185800144|********",
-    "17185800034|********",
-    "17190714681|********"
+    "17051056242|870921",
+    "17557289654|131313",
+    "cybycy@gmail.com|131313"
 ]
 
 #"http": "http://127.0.0.1:8087
@@ -29,8 +39,8 @@ try:
     #conn params
     headers = json.loads(conf.get("conn_params", "headers"))
     #API params
-    access_token = conf.get("sina_api", "access_token") 
-    app_key = conf.get("sina_api", "app_key") 
+    access_token = conf.get("sina_api", "access_token")
+    app_key = conf.get("sina_api", "app_key")
 except Exception, e:
     print "init params error! " + str(e)
     pass
